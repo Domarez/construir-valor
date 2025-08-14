@@ -1,12 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/reformas/(.*)",
-            "destination": "/$1"
-        },
-        {
-            "source": "/reformas",
-            "destination": "/index.html"
+            "source": "/reformas(/?)(.*)",
+            "destination": "https://reformas-app.vercel.app/$2"
         }
     ]
 }
