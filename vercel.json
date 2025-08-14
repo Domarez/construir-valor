@@ -1,16 +1,11 @@
 {
     "routes": [
         {
-            "handle": "filesystem"
-        },
-        {
             "src": "/reformas(/?)(.*)",
             "dest": "https://reformasempresas.vercel.app/$2",
             "headers": {
-                "x-forwarded-host": "www.construirvalor.com.ar",
                 "x-rewrite-url": "/$2"
-            },
-            "continue": true
+            }
         }
     ]
 }
