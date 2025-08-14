@@ -9,5 +9,15 @@
             "destination": "https://reformasempresas.vercel.app/:path*"
         }
     ],
-    "cleanUrls": true
+    "headers": [
+        {
+            "source": "/reformas",
+            "headers": [
+                {
+                    "key": "x-vercel-rewrite",
+                    "value": "https://reformasempresas.vercel.app"
+                }
+            ]
+        }
+    ]
 }
