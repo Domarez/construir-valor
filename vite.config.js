@@ -8,6 +8,6 @@ export default defineConfig({
         react()
     ],
     build: {
-        outDir: 'dist'
+        outDir: 'dist',
     }
 })
