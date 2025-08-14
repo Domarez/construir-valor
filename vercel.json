@@ -1,12 +1,12 @@
 {
     "rewrites": [
         {
-            "source": "/reformas/_next/static/(.*)",
-            "destination": "/_next/static/$1"
-        },
-        {
             "source": "/reformas/(.*)",
             "destination": "/$1"
+        },
+        {
+            "source": "/reformas",
+            "destination": "/index.html"
         }
     ]
 }
