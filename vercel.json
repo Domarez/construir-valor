@@ -2,7 +2,14 @@
     "rewrites": [
         {
             "source": "/reformas",
-            "destination": "https://reformasempresas.vercel.app"
+            "destination": "https://reformasempresas.vercel.app",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "x-vercel-rewrite",
+                    "value": "true"
+                }
+            ]
         },
         {
             "source": "/reformas/:path*",
@@ -15,7 +22,7 @@
             "headers": [
                 {
                     "key": "x-vercel-rewrite",
-                    "value": "https://reformasempresas.vercel.app"
+                    "value": "true"
                 }
             ]
         }
