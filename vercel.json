@@ -2,11 +2,11 @@
     "rewrites": [
         {
             "source": "/reformas/_next/static/(.*)",
-            "destination": "https://reformasempresas.vercel.app/_next/static/$1"
+            "destination": "/_next/static/$1"
         },
         {
             "source": "/reformas/(.*)",
-            "destination": "https://reformasempresas.vercel.app/$1"
+            "destination": "/$1"
         }
     ]
 }
