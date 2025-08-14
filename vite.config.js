@@ -8,7 +8,6 @@ export default defineConfig({
         react()
     ],
     build: {
-        outDir: 'dist',
-        assetsDir: 'assets'
+        outDir: 'dist'
     }
 })
