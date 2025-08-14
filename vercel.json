@@ -1,8 +1,12 @@
 {
     "rewrites": [
         {
+            "source": "/reformas/assets/(.*)",
+            "destination": "https://reformasempresas.vercel.app/reformas/assets/$1"
+        },
+        {
             "source": "/reformas(/?)(.*)",
-            "destination": "https://reformas-app.vercel.app/$2"
+            "destination": "https://reformasempresas.vercel.app/$2"
         }
     ]
 }
