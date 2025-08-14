@@ -1,21 +1,17 @@
 {
     "rewrites": [
         {
-            "source": "/reformas(/?)(.*)",
-            "destination": "https://reformasempresas.vercel.app/$2"
+            "source": "/reformas/:path*",
+            "destination": "https://reformasempresas.vercel.app/:path*"
         }
     ],
     "headers": [
         {
-            "source": "/reformas(/?)(.*)",
+            "source": "/reformas/:path*",
             "headers": [
                 {
                     "key": "x-middleware-rewrite",
-                    "value": "/$2"
-                },
-                {
-                    "key": "x-vercel-base-path",
-                    "value": "/reformas"
+                    "value": "https://reformasempresas.vercel.app/:path*"
                 }
             ]
         }
