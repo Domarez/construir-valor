@@ -1,35 +1,21 @@
 {
     "rewrites": [
         {
-            "source": "/reformas/:path*",
-            "destination": "https://reformasempresas.vercel.app/:path*",
-            "has": [
-                {
-                    "type": "header",
-                    "key": "x-vercel-rewrite",
-                    "value": "true"
-                }
-            ]
+            "source": "/reformas/(.*)",
+            "destination": "https://reformasempresas.vercel.app/$1"
         },
         {
             "source": "/reformas",
-            "destination": "https://reformasempresas.vercel.app",
-            "has": [
-                {
-                    "type": "header",
-                    "key": "x-vercel-rewrite",
-                    "value": "true"
-                }
-            ]
+            "destination": "https://reformasempresas.vercel.app"
         }
     ],
     "headers": [
         {
-            "source": "/reformas/:path*",
+            "source": "/reformas(/?)(.*)",
             "headers": [
                 {
-                    "key": "x-vercel-rewrite",
-                    "value": "true"
+                    "key": "x-middleware-rewrite",
+                    "value": "https://reformasempresas.vercel.app/$2"
                 }
             ]
         }
